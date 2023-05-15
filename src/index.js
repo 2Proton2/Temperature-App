@@ -7,7 +7,7 @@ const path = require('path');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const templateFolderPath = path.join(__dirname, '../templates');
-const port = '3000';
+const port = process.env.PORT || 3000;
 const getTempFunc = require('../middlewares/paramBoundLogic.js');
 
 /**
