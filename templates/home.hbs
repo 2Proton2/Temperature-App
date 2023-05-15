@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/home.css">
+    <title>temperature</title>
+</head>
+<body>
+    <div id="main">
+        <img src="../img/weather.jpg">
+        <div id"title">
+            <h1>Welcome to the temperature API</h1>
+        </div>
+        
+        <div id="content">
+            <div id="left">
+                <form method="POST" action="/">
+                    <label for='city' class="city-input">Enter the name of the city</label><input type="text" id='city' name="city"><br>
+                    <input type="submit" class="submit">
+                </form>
+            </div>
+            {{#if backendData}}
+            {{log 'x=>'backendData}}
+            {{> submission}}
+            {{/if}}
+        </div>
+    </div>
+</body>
+</html>

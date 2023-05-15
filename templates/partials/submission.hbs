@@ -1,0 +1,13 @@
+<div id="right">
+    {{#if backendData.response}}
+        <h3>City: {{backendData.city}}</h3>
+        <h3>Temperature in Celsius</h3>
+        <p>Current Temperature is {{backendData.celsius.temp}} while it feels like {{backendData.celsius.feelslike}}</p>
+        <h3>Temperature in Kelvin</h3>
+        <p>Current Temperature is {{backendData.kelvin.temp}} while it feels like {{backendData.kelvin.feelslike}}</p>
+        <h3>Temperature in Fahrenheit</h3>
+        <p>Current Temperature is {{backendData.fahrenheit.temp}} while it feels like {{backendData.fahrenheit.feelslike}}</p>
+    {{else}}
+        <p>Error 404 !! {{backendData.message}}</p>
+    {{/if}}
+</div>
